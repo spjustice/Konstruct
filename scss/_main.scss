@@ -222,28 +222,34 @@ h2{
     .wrapper{
         .get{
             text-align: center;
-            .get__question{
-                width: 350px;
-                font-family: Open Sans;
-                font-style: normal;
-                font-weight: bold;
-                font-size: 30px;
-                line-height: 36px;
+
+            .get__box{
                 text-align: center;
-                letter-spacing: 0.15px;
-                color: #48555B;
+                .get__question{
+                    width: 350px;
+                    font-family: Open Sans;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 30px;
+                    line-height: 36px;
+                    text-align: center;
+                    letter-spacing: 0.15px;
+                    color: #48555B;
+                }
             }
-            .get__button{
-                background-color: #00A4E5;
-                font-family: Open Sans;
-                font-style: normal;
-                font-weight: bold;
-                font-size: 13px;
-                line-height: 18px;
-                text-align: center;
-                letter-spacing: 0.5px;
-                color: #FFFFFF;
-            }
+            .get__box{    
+                .get__button{
+                    background-color: #00A4E5;
+                    font-family: Open Sans;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 13px;
+                    line-height: 18px;
+                    text-align: center;
+                    letter-spacing: 0.5px;
+                    color: #FFFFFF;
+                }
+            }    
         }
     }
 }
