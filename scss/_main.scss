@@ -68,6 +68,7 @@ h1{
     }
     .head__nav{
         .menu__box{
+            // Здесь нормально не работает, про это говорил по телефону
             width: 400px;
             justify-content: space-between;
             display: flex;
@@ -104,6 +105,7 @@ h1{
                 margin: 0px 0px 60px 0px;
             }
             .story__box{
+                // Тут еще не начинал, но в бустрапе нужно будет написать display: block;
                 display: flex;
                 justify-content: space-between;
                 &-text{
@@ -158,6 +160,7 @@ h1{
         .capabil{
             margin: 0px 0px 115px 0px;
             .capabil__title{
+                // Тут хотел бы адекватнее сделать, еще не дошел
                 display: flex;
                 justify-content: space-between;
                 .capabil_title-rbox{
@@ -189,6 +192,7 @@ h1{
                 }    
             }
             .capabil__box{
+                // Тут вроде адекватно сделал, как хотел
                 display: flex;
                 flex-wrap: wrap;
                 .capabil__item{
@@ -326,6 +330,8 @@ h2{
     background: #141A20;
     .wrapper{
         .footer__content{ 
+
+            // Тут тоже dispay: block; должен быть
             display: flex;
             padding: 42px 0px 40px 0px;
             justify-content: space-between;
@@ -361,7 +367,6 @@ h2{
                     line-height: 25px;
                     letter-spacing: 0.846154px;
                     color: #FFFFFF;
-
                 }
             }
             .footer__contacts{
@@ -464,7 +469,7 @@ h3{
     .footer__socials{
         flex-direction:column;
         height: 90px;
-        width: unset !important;
+        width: unset !important;    //Эта и след строка
         align-items: unset !important;
     }
 }
@@ -476,5 +481,5 @@ h3{
         flex-wrap:wrap;
         margin: unset;
     }
-    
+
 }
