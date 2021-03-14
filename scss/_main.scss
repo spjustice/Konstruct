@@ -1,7 +1,6 @@
 .wrapper{
     max-width: 941px;
     margin: 0 auto;
-    
 } 
 .header{
     height: 100vh;
@@ -57,36 +56,38 @@ h1{
     color: #FFFFFF;
 }
 .head__block{
+    height: 65px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 65px;
-    margin: 0px 0px 58px 0px;
-    
+    .hear__logo{
+        & img{
+            width: 100%;
+            height: 100%;
+        }
+    }
     .head__nav{
-        ul{
+        .menu__box{
+            width: 400px;
+            justify-content: space-between;
             display: flex;
-            li{
-                margin: 0px 20px;
-                &:last-child{
-                    margin-right: unset;
-                }
+            & li a{
+                padding: 25px 5px;
+                font-family: Open Sans;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 16px;
+                letter-spacing: 1.09091px;
+                color: #48555B;
+            }
+            & li:nth-child(2){
                 a{
-                    font-family: Open Sans;
-                    font-style: normal;
-                    font-weight: 600;
-                    font-size: 12px;
-                    line-height: 16px;
-                    letter-spacing: 1.09091px;
-                    color: #48555B;
-                }
-                .nav-active{
                     color: #00A4E5;
                 }
             }
         }
     }
-
 }
 .content{
     .wrapper{
@@ -108,7 +109,7 @@ h1{
                 &-text{
                     display: inline-block;
                     min-width: 200px;
-                    width: 405/941*100%;
+                    max-width: 405/941*100%;
                     .box__text-bold{
                         margin: 0px 0px 30px 0px;
                         font-family: Open Sans;
@@ -146,6 +147,7 @@ h1{
                     }
                     div:nth-child(3){
                         background: url(../img/story-img3.png);
+                        z-index: 1;
                     }
                     div:last-child{
                         margin-right: unset;
@@ -189,7 +191,6 @@ h1{
             .capabil__box{
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: center;
                 .capabil__item{
                     border: 1px solid #E6E6E6;
                     padding: 38px 22px 39px 23px;
@@ -328,6 +329,9 @@ h2{
             display: flex;
             padding: 42px 0px 40px 0px;
             justify-content: space-between;
+            & div{
+                margin: 0px 20px 0px 0px;
+            }
             .footer__company{
                 width: 250px;
                 .company_logo{
@@ -414,75 +418,63 @@ h3{
         }
     }
 }
-@media (max-width: 941px){
+@media (max-width: 991px){
     .wrapper{
-        max-width: 750px;
+        max-width: 700px;
+        .story{
+            .story__box-image {
+                div:nth-child(3){
+                    width: 300px;
+                    background: url(/Konstruct/img/story-img3.1.png) center/cover no-repeat;
+                    height: 140px;
+                    z-index: 2;
+                }
+            }
+            .story__box{
+                display: block;
+            }
+        }
     }
 }
 @media (max-width: 767px){
     .wrapper{
-        max-width: none;
-        padding: 0px 15px;
-    }
-    /*
-    #menu__toggle {
-        opacity: 0;
-    }
-    .menu__btn {
-        display: flex;
-        align-items: center;
-        position: relative;
-        top: 20px;
-        left: 20px;
-        width: 26px;
-        height: 26px;
-        cursor: pointer;
-        z-index: 1;
-    }
-    .menu__btn > span,
-    .menu__btn > span::before,
-    .menu__btn > span::after {
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        background-color: #616161;
-    }
-    .menu__btn > span::before {
-        content: '';
-        top: -8px;
-    }
-    .menu__btn > span::after {
-        content: '';
-        top: 8px;
-    }
-    .menu__box{
-        visibility: hidden;
-        & a{
-            display: block;
-            padding: 12px 24px;
+        max-width: 575px;
+        .story{
+            .story__box{
+                justify-content: space-between;
+                .story__box-image {   
+                    margin: unset;
+                    width: 480px;
+                }   
+            }    
+        }
+        .capabil{   
+            .capabil__box{
+                flex-wrap: nowrap;
+                .capabil__item{
+                width: unset !important;
+                margin-right: unset !important;
+                }
+            }
         }
     }
-    #menu__toggle:checked ~ .menu__btn > span {
-        transform: rotate(45deg);
+    .signup__text{
+        margin: 0px 0px 15px;
     }
-    #menu__toggle:checked ~ .menu__btn > span::before {
-        top: 0;
-        transform: rotate(0);
+    .footer__socials{
+        flex-direction:column;
+        height: 90px;
+        width: unset !important;
+        align-items: unset !important;
     }
-    #menu__toggle:checked ~ .menu__btn > span::after {
-        top: 0;
-        transform: rotate(90deg);
-    }
-    #menu__toggle:checked ~ .menu__box {
-        visibility: visible;
-        left: 0;
-    }
-    */
 }
-@media (max-width: 680px){
-    .capabil__item{
-        display: block;
-        width: 85%;
+@media (max-width: 575px){
+    .wrapper{
+        max-width: 85%;
     }
+    .head__nav li:after{
+        flex-wrap:wrap;
+        margin: unset;
+    }
+    
 }
